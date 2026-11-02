@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+    # reading the PORT from .env
+      - "3000:${PORT}"
+    environment:
+      PORT: ${PORT}
+    restart: unless-stopped
