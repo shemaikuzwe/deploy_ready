@@ -5,7 +5,7 @@ Kora Analytics API deployed to AWS EC2 with Docker Compose, Nginx, GitHub Action
 ## Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[Push to main] --> B[Run app tests]
     B --> C[Build image tagged with commit SHA]
     C --> D[Push image to GHCR]
@@ -37,8 +37,8 @@ On each push to `main`, GitHub Actions runs the application tests, builds and pu
 
 Set these repository secrets for deployment:
 
-- `DEPLOY_HOST`: EC2 public IP
-- `DEPLOY_USER`: deploy user limited access.
+- `DEPLOY_HOST`: 54.82.9.189
+- `DEPLOY_USER`: `deploy` user limited access.
 - `DEPLOY_SSH_KEY`: private SSH key
 
 ## Deployment and operations
