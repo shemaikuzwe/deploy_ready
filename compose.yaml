@@ -1,7 +1,7 @@
 # Docker compose file for production
 services:
   app:
-    image: ${IMAGE}:${IMAGE_TAG}
+    image: ${IMAGE}:${IMAGE_TAG:-latest}
     environment:
       PORT: 3000
     expose:
